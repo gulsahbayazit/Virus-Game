@@ -1,0 +1,116 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+}
+.gameStart {
+  background-image: url("img/landingpage.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.section {
+  padding-top: 2em;
+  padding-left: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+nav .logo {
+  width: 10em;
+  padding: 4em;
+  display: flex;
+  align-self: flex-start;
+}
+.gameGeneral {
+  display: flex;
+  flex-direction: column;
+  padding-left: 4rem;
+}
+.gameGeneral h1 {
+  font-size: 7em;
+  font-family: "Pangolin", cursive;
+  color: #139d01;
+  padding: 0;
+}
+
+.gameGeneral p {
+  padding: 0;
+  font-size: 2.5em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #139d01;
+  opacity: 0.9;
+  padding-bottom: 2.5em;
+}
+.btn {
+  font-size: 2.5em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #fdfef9;
+  opacity: 0.9;
+  border-radius: 1.5em;
+  text-decoration: none;
+  padding: 0.8em 1.5em;
+  background-color: #139d01;
+  text-align: center;
+  width: 20rem;
+}
+
+#gameGeneralCenter {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.winImg {
+  width: 15em;
+}
+.gameOverImg {
+  width: 20em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+}
+
+.endGame {
+  background-image: url("img/background_win_gameover.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.index_container {
+  padding: 20px;
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#score {
+  color: #e91bf0;
+  font-size: 2em;
+  font-family: "Pangolin", cursive;
+}
+
+#close-btn {
+  text-decoration: none;
+  color: #e91bf0;
+  font-size: 3em;
+  font-family: "Pangolin", cursive;
+}
