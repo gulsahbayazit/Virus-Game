@@ -8,8 +8,8 @@ function windowResized() {
 
 let score = 0;
 
-let audio = new Audio("game.mp3");
-audio.play();
+// let audio = new Audio("game.mp3");
+// audio.play();
 
 function draw() {
   game.draw();
@@ -31,7 +31,7 @@ function mouseClicked() {
 //////////GAME ///////////////////////
 //////////////////////////////////////
 let song;
-let clickSong;
+
 class Game {
   constructor() {
     this.virus = [];
@@ -42,13 +42,15 @@ class Game {
     this.playerImage;
     this.background = new Background();
     this.backgroundImage;
+    this.song;
+
+    this.songIsPlaying = false;
   }
   preload() {
     this.playerImage = loadImage("img/injector.png");
     this.backgroundImage = loadImage("img/background.jpg");
     this.shootImage = loadImage("img/drop.png");
-    // this.winSong = loadSound("win.mp3");
-    // this.endSong = loadSound("game-over.mp3");
+    this.song = loadSound("game.mp3");
 
     this.virusImage = [
       loadImage("img/virus_4.png"),
@@ -60,8 +62,14 @@ class Game {
 
   draw() {
     clear();
+
     this.background.draw();
     this.player.draw();
+
+    if (!this.songIsPlaying) {
+      this.song.play();
+      this.songIsPlaying = true;
+    }
     // new Virus
     if (frameCount % 30 == 0) {
       this.virus.push(new Virus());
@@ -88,9 +96,8 @@ class Game {
       }
     }
 
-    if (score > 800) {
+    if (score > 500) {
       text("Win", 30, 30);
-      setTimeout(loop, 10000);
       noLoop();
       window.location.href = "win.html";
     }
