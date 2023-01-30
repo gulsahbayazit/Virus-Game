@@ -88,7 +88,7 @@ class Game {
       }
     }
 
-    if (score > 300) {
+    if (score > 800) {
       text("Win", 30, 30);
       setTimeout(loop, 10000);
       noLoop();
